@@ -2,13 +2,12 @@
 import { ChangeEvent, useState } from "react";
 import { validateForm } from "@/utils/validate";
 import { Button } from "@/components/ui/button";
-type SignupProps = object;
 const initSignupForm = {
   email: "",
   password: "",
   cfpassword: "",
 };
-const SignUp: React.FC<SignupProps> = ({}) => {
+const SignUp: React.FC = ({}) => {
   const [user, setUser] = useState(initSignupForm);
   const [errors, setError] = useState<Record<string, string>>({});
   const [isloading, setIsloading] = useState<boolean>(false);
